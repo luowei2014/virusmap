@@ -12,3 +12,4 @@ webmagic(Java爬虫框架，爬取疫情信息)
 2，schedule，定时器模块，用于定时启动爬虫。
 3，Controller，web数据拉取接口。
 
+创建数据库的时候，名字最好也要叫  virus
