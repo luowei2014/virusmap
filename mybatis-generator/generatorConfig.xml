@@ -64,5 +64,9 @@
         <table tableName="outcity">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
+        <!-- 疫情实时数据-->
+        <table tableName="virusdata">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
     </context>
 </generatorConfiguration>

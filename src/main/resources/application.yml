@@ -4,7 +4,6 @@ pagehelper:
   reasonable: false
   supportMethodsArguments:  true
   params: count=countSql
-
 spring:
   profiles:
     active: db
@@ -39,4 +38,5 @@ logging:
     org.springframework:  ERROR
     org.mybatis:  ERROR
     com.luowei.virusmap:  DEBUG
-
+server:
+  port: 88
