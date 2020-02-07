@@ -22,3 +22,16 @@ CREATE TABLE `outcity` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `outcity_UN` (`city_code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `virusdata` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `province` varchar(100) DEFAULT NULL,
+  `confirm` int(10) DEFAULT NULL,
+  `suspect` int(10) DEFAULT NULL,
+  `heal` int(10) DEFAULT NULL,
+  `dead` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `virusdata_UN` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=415 DEFAULT CHARSET=utf8
