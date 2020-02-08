@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.luowei.virusmap.dao.IncityMapper;
 import com.luowei.virusmap.dao.OutcityMapper;
 import com.luowei.virusmap.dao.VirusdataMapper;
+import com.luowei.virusmap.dao.VirusdataViewMapper;
 import com.luowei.virusmap.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -26,6 +27,8 @@ public class VirusService {
 	private OutcityMapper outcityMapper;
 	@Resource
 	private VirusdataMapper virusdataMapper;
+	@Resource
+	private VirusdataViewMapper virusdataViewMapper;
 
 	public List<Virusdata> getVirusDataList(int page,int size,String sort,String sortColum){
 		PageHelper.startPage(page, size);
@@ -62,5 +65,10 @@ public class VirusService {
 		OutcityExample.Criteria criteria=outcityExample.createCriteria();
 		outcityExample.setOrderByClause(sortColum+" "+sort);
 		return outcityMapper.selectByExample(outcityExample);
+	}
+
+	public List<VirusdataView> getVirusViewList(){
+		VirusdataViewExample virusdataViewExample=new VirusdataViewExample();
+		return virusdataViewMapper.selectByExample(virusdataViewExample);
 	}
 }
